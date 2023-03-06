@@ -33,19 +33,19 @@ jobs:
         toolchain: ${{ matrix.rust }}
         components: rustfmt, clippy
     - name: Build        
-      uses: action-rs/cargo@v1    
+      uses: actions-rs/cargo@v1    
       with:
         command: build
     - name: Test        
-      uses: action-rs/cargo@v1    
+      uses: actions-rs/cargo@v1    
       with:
         command: test
     - name: Rustfmt        
-      uses: action-rs/cargo@v1    
+      uses: actions-rs/cargo@v1    
       with:
         command: fmt
         args: --all -- --check
     - name: Clippy        
-      uses: action-rs/cargo@v1    
+      uses: actions-rs/cargo@v1    
       with:
         command: clippy
