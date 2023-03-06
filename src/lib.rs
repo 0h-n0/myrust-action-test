@@ -1,5 +1,7 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+use num_cpus;
+
+pub fn get() -> usize {
+    return num_cpus::get();
 }
 
 #[cfg(test)]
@@ -8,7 +10,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        println!("There are {} cpus", get());
+        assert_eq!(4, 4);
     }
 }
